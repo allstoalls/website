@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>allstoalls</title>
+    <meta name="description" content="allstoalls builds foundational systems software, including pcc — a Python-authored compiler toolchain." />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="/">allstoalls</a>
+            <nav class="site-nav"><a href="/about">About</a></nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro">
+            <div class="wrap">
+                <h1>Systems software, built from scratch.</h1>
+                <p>We build foundational infrastructure you can <strong>own outright</strong> &mdash; compiled,
+                    inspectable, self-hostable, and honest about what it does and does not do.</p>
+                <p><a href="#pcc">pcc</a>, our compiler toolchain, is open source and available today.</p>
+            </div>
+        </div>
+
+        <section>
+            <div class="wrap">
+                <h2>Products</h2>
+
+                <article class="product" id="pcc">
+                    <div class="product-head">
+                        <h3>pcc</h3>
+                        <span class="tag">Compiler toolchain</span>
+                    </div>
+                    <p>A Python-authored compiler toolchain. Its most mature path is a C frontend that lowers C
+                        to LLVM IR and runs real third-party projects &mdash; Lua, SQLite, PostgreSQL <code>libpq</code>,
+                        zlib, PCRE, OpenSSL and nginx among them. It self-hosts through a three-stage bootstrap
+                        with no <code>libpython</code>, ships five comparative GC backends selectable at startup,
+                        and includes an in-tree native backend that emits code without LLVM.</p>
+                    <p>A research compiler with practical integration tests &mdash; not a drop-in replacement for
+                        Clang or CPython.</p>
+                    <div class="links">
+                        <a href="https://github.com/allstoalls/pcc">GitHub</a>
+                        <a href="https://pypi.org/project/python-cc/">PyPI</a>
+                    </div>
+
+                    <div class="subs">
+                        <p class="subs-label">Built on pcc</p>
+
+                        <div class="sub" id="pcc-gui">
+                            <h4>pcc-gui</h4>
+                            <p>A declarative desktop GUI framework written in pcc-Python and compiled to native
+                                code by pcc: a retained element tree, a bounded style grammar, layout, theme
+                                animation, CoreGraphics/Metal drawing and an AppKit window bridge &mdash; with no
+                                <code>libpython</code> at run time. Currently macOS on Apple silicon.</p>
+                            <div class="links"><a href="https://github.com/allstoalls/pcc-gui">GitHub</a></div>
+                        </div>
+
+                        <div class="sub" id="pcc-gateway">
+                            <h4>pcc-gateway</h4>
+                            <p>A virtual-thread gateway built on the pcc runtime &mdash; HTTP/1.1 server, reverse
+                                proxy, DNS and TLS provider. Recently extracted from the compiler core and still
+                                moving; build it against an installed pcc.</p>
+                            <div class="links"><a href="https://github.com/allstoalls/pcc-gateway">GitHub</a></div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>&copy; 2026 allstoalls</span>
+            <a href="mailto:support@allstoalls.com">support@allstoalls.com</a>
+            <a href="https://github.com/allstoalls">GitHub</a>
+        </div>
+    </footer>
+</body>
+
+</html>
